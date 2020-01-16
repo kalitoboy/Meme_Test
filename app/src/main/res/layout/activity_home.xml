@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Home">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/TabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/overview" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/health"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/health" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings" />
+        </com.google.android.material.tabs.TabLayout>
+
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Meme Test</string>
+    <string name="overview">overview</string>
+    <string name="health">health</string>
+    <string name="settings">settings</string>
+    <string name="welcome">Welcome to Meme Test</string>
+    <string name="start">Start</string>
+
+    <string name="button1">button1</string>
+    <string name="button2">button2</string>
+    <string name="button3">button3</string>
+    <string name="status">Status</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="connected">Connected</string>
+    <string name="connect">Connect</string>
+    <string name="battery">Battery</string>
+    <string name="calibrate">Calibrate</string>
+    <string name="daily_step_goal">Daily step goal</string>
+    <string name="concentration">Concentration</string>
+    <string name="steps">Steps</string>
+    <string name="blinks">blinks</string>
+    <string name="training">Training</string>
+    <string name="neck">Neck</string>
+
+    <string-array name="array_steps">
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+        <item>6000</item>
+        <item>7000</item>
+        <item>8000</item>
+        <item>9000</item>
+        <item>10000</item>
+    </string-array>
+
+    <string-array name="array_training">
+        <item>Neck</item>
+        <item>Head</item>
+        <item>Back</item>
+    </string-array>
+
+</resources>
