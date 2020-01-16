@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -36,22 +37,20 @@ public class Health extends Fragment {
 
     private static final String TAG = "HEALTH";
 
+    int steps;
+
     PieChartView pieChartView;
 
     List<SliceValue> pieData;
 
     private LineChartView concentration_lineChartView, blinks_linechartView;
 
-    int steps;
-
     Button concentration_button, blinks_button;
 
     SliceValue goal, current;
 
     String[] xAxis  = {"08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18"};
-
     int[] concentration_yAxis = {50, 20, 15, 30, 20, 60, 15, 40, 45, 10, 90, 18};
-
     float[] blinks_yAxis = {10.2f, 9.8f, 8.6f, 9.8f, 11.2f, 12.4f, 8.7f, 9.8f, 10.2f, 6.5f, 7.6f};
 
 
@@ -217,13 +216,4 @@ public class Health extends Fragment {
 
     }
 
-    public String[] getxAxis() {
-        return xAxis;
-    }
-
-
-
-    public void setxAxis(String[] xAxis) {
-        this.xAxis = xAxis;
-    }
 }
