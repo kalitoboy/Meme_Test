@@ -36,6 +36,7 @@
     </string-array>
 
     <string-array name="array_training">
+        <item>Select Training</item>
         <item>Neck</item>
         <item>Head</item>
         <item>Back</item>

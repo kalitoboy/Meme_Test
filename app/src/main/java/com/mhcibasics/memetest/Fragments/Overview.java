@@ -106,11 +106,10 @@ public class Overview extends Fragment implements AdapterView.OnItemSelectedList
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String message =  parent.getSelectedItem().toString();
-        /*if (parent.isSelected() && equals(message)){
+        if (parent.getSelectedItem().equals("Neck")){
             Intent intent = new Intent(view.getContext(), Neck.class);
             startActivity(intent);
-        }*/
+        }
 
 
     }
