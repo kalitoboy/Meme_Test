@@ -1,4 +1,4 @@
-package com.mhcibasics.memetest;
+package com.mhcibasics.memetest.fragments.settingsSub;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,14 +12,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.mhcibasics.memetest.R;
 
 public class Calibration extends AppCompatActivity implements SensorEventListener {
 
     private static final String TAG = "Calibration";
-
-    private SensorManager sensorManager;
-    private android.hardware.Sensor sensor;
 
     private TextView x, y, z;
     private Button calibrate;
@@ -38,9 +36,9 @@ public class Calibration extends AppCompatActivity implements SensorEventListene
 
         calibrate = findViewById(R.id.button_calibrate);
 
-        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        SensorManager sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 
-        sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL);
 
 

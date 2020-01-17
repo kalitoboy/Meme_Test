@@ -1,4 +1,4 @@
-package com.mhcibasics.memetest.Fragments.Training;
+package com.mhcibasics.memetest.fragments.training;
 
 import androidx.appcompat.app.AppCompatActivity;
 

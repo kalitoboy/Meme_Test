@@ -1,12 +1,10 @@
-package com.mhcibasics.memetest.Fragments.HealthSub;
+package com.mhcibasics.memetest.fragments.healthSub;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
 
-import com.mhcibasics.memetest.Fragments.Health;
 import com.mhcibasics.memetest.R;
 
 import java.util.ArrayList;

@@ -1,10 +1,7 @@
-package com.mhcibasics.memetest.Fragments;
+package com.mhcibasics.memetest.fragments;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.os.BatteryManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,7 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.mhcibasics.memetest.Calibration;
+import com.mhcibasics.memetest.fragments.settingsSub.Calibration;
 import com.mhcibasics.memetest.R;
 
 
@@ -33,9 +30,7 @@ public class Settings extends Fragment implements AdapterView.OnItemSelectedList
 
     private Button connect, calibration;
 
-    private TextView text_status, battery_level;
-
-    private Spinner spinner_steps;
+    private TextView text_status;
 
     int status, bat_level, steps;
 
@@ -68,9 +63,9 @@ public class Settings extends Fragment implements AdapterView.OnItemSelectedList
 
         text_status = view.findViewById(R.id.text_connect);
 
-        battery_level = view.findViewById(R.id.text_battery_level);
+        TextView battery_level = view.findViewById(R.id.text_battery_level);
 
-        spinner_steps = view.findViewById(R.id.spinner_steps);
+        Spinner spinner_steps = view.findViewById(R.id.spinner_steps);
         ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(super.getContext(), R.array.array_steps, android.R.layout.simple_spinner_item);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner_steps.setAdapter(arrayAdapter);

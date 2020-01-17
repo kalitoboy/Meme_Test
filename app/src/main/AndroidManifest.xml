@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Fragments.Training.Neck"></activity>
-        <activity android:name=".Fragments.HealthSub.Steps" />
-        <activity android:name=".Fragments.HealthSub.Blinks" />
-        <activity android:name=".Fragments.HealthSub.Concentration" />
-        <activity android:name=".Calibration" />
-        <activity android:name=".Fragments.Home" />
+        <activity android:name=".fragments.training.Neck" />
+        <activity android:name=".fragments.healthSub.Steps" />
+        <activity android:name=".fragments.healthSub.Blinks" />
+        <activity android:name=".fragments.healthSub.Concentration" />
+        <activity android:name=".fragments.settingsSub.Calibration" />
+        <activity android:name=".Home" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

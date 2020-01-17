@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragments.Health">
+    tools:context=".fragments.Health">
 
     <TextView
         android:id="@+id/health"

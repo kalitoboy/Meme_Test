@@ -1,4 +1,4 @@
-package com.mhcibasics.memetest.Fragments;
+package com.mhcibasics.memetest.fragments;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -21,7 +21,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mhcibasics.memetest.Fragments.Training.Neck;
+import com.mhcibasics.memetest.fragments.training.Neck;
 import com.mhcibasics.memetest.R;
 
 
@@ -31,7 +31,8 @@ public class Overview extends Fragment implements AdapterView.OnItemSelectedList
 
     private Button button;
 
-    private TextView text_status, battery_level, text_steps_total;
+    private TextView text_status;
+    private TextView battery_level;
 
     int status, steps, bat_level;
 
@@ -47,7 +48,7 @@ public class Overview extends Fragment implements AdapterView.OnItemSelectedList
         @Override
         public void onReceive(Context ctxt, Intent intent) {
             bat_level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
-            battery_level.setText(String.valueOf(bat_level) + "%");
+            battery_level.setText(bat_level + "%");
         }
     };
 
@@ -60,7 +61,7 @@ public class Overview extends Fragment implements AdapterView.OnItemSelectedList
         button = view.findViewById(R.id.button_connect);
         text_status = view.findViewById(R.id.text_connect);
         battery_level = view.findViewById(R.id.text_battery_level);
-        text_steps_total = view.findViewById(R.id.text_steps_total);
+        TextView text_steps_total = view.findViewById(R.id.text_steps_total);
         spinner_training = view.findViewById(R.id.spinner_steps);
 
         text_steps_total.setText(String.valueOf(steps));

@@ -1,11 +1,10 @@
-package com.mhcibasics.memetest.Fragments;
+package com.mhcibasics.memetest.fragments;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -15,8 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.mhcibasics.memetest.Fragments.HealthSub.Blinks;
-import com.mhcibasics.memetest.Fragments.HealthSub.Concentration;
+import com.mhcibasics.memetest.fragments.healthSub.Blinks;
+import com.mhcibasics.memetest.fragments.healthSub.Concentration;
 import com.mhcibasics.memetest.R;
 
 import java.util.ArrayList;
@@ -43,8 +42,6 @@ public class Health extends Fragment {
 
     List<SliceValue> pieData;
 
-    private LineChartView concentration_lineChartView, blinks_linechartView;
-
     Button concentration_button, blinks_button;
 
     SliceValue goal, current;
@@ -54,7 +51,7 @@ public class Health extends Fragment {
     float[] blinks_yAxis = {10.2f, 9.8f, 8.6f, 9.8f, 11.2f, 12.4f, 8.7f, 9.8f, 10.2f, 6.5f, 7.6f};
 
 
-    protected void displayReceivedData(String message) {
+    public void displayReceivedData(String message) {
         reinitPieChart(pieChartView, pieData, message);
         Log.d(TAG, message);
     }
@@ -141,8 +138,8 @@ public class Health extends Fragment {
 
     public void initLineChart(View view){
 
-        concentration_lineChartView = view.findViewById(R.id.concentration_linechart);
-        blinks_linechartView = view.findViewById(R.id.blinks_linechart);
+        LineChartView concentration_lineChartView = view.findViewById(R.id.concentration_linechart);
+        LineChartView blinks_linechartView = view.findViewById(R.id.blinks_linechart);
 
         setConcentrationData(concentration_lineChartView);
         setBlinksData(blinks_linechartView);

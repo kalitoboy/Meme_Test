@@ -1,11 +1,10 @@
-package com.mhcibasics.memetest.Fragments.HealthSub;
+package com.mhcibasics.memetest.fragments.healthSub;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
 
-import com.mhcibasics.memetest.Fragments.Health;
 import com.mhcibasics.memetest.R;
 
 import java.util.ArrayList;
@@ -18,31 +17,33 @@ import lecho.lib.hellocharts.model.LineChartData;
 import lecho.lib.hellocharts.model.PointValue;
 import lecho.lib.hellocharts.view.LineChartView;
 
-public class Blinks extends AppCompatActivity {
+public class Steps extends AppCompatActivity {
 
-    LineChartView blinks_lineChartView;
+    LineChartView steps_lineChartView;
 
     String[] xAxis  = {"08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18"};
 
-    float[] blinks_yAxis = {10.2f, 9.8f, 8.6f, 9.8f, 11.2f, 12.4f, 8.7f, 9.8f, 10.2f, 6.5f, 7.6f};
+    int[] steps_yAxis = {100,200,150,400,30,260,1230,210,306,420,888};
+
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blinks);
+        setContentView(R.layout.activity_steps);
 
         initLineChart();
-
 
     }
 
     public void initLineChart(){
 
-        blinks_lineChartView = findViewById(R.id.concentration_linechart);
+        steps_lineChartView = findViewById(R.id.concentration_linechart);
 
-        setBlinksData(blinks_lineChartView);
+        setBlinksData(steps_lineChartView);
+
+        initLineChart();
 
     }
 
@@ -70,8 +71,8 @@ public class Blinks extends AppCompatActivity {
             xValue.add(i, new AxisValue(i).setLabel(xAxis[i]));
         }
 
-        for (int i = 0; i < blinks_yAxis.length; i++){
-            yValues.add(new PointValue(i, blinks_yAxis[i]));
+        for (int i = 0; i < steps_yAxis.length; i++){
+            yValues.add(new PointValue(i, steps_yAxis[i]));
         }
 
         List blinks_line = new ArrayList();

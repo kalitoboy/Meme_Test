@@ -1,4 +1,4 @@
-package com.mhcibasics.memetest.Fragments;
+package com.mhcibasics.memetest;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -7,16 +7,14 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.google.android.material.tabs.TabLayout;
-import com.mhcibasics.memetest.R;
-import com.mhcibasics.memetest.SectionsPageAdapter;
+import com.mhcibasics.memetest.fragments.Health;
+import com.mhcibasics.memetest.fragments.Overview;
+import com.mhcibasics.memetest.fragments.SendMessage;
+import com.mhcibasics.memetest.fragments.Settings;
 
 public class Home extends AppCompatActivity implements SendMessage {
 
     private static final String TAG ="Home";
-
-    private SectionsPageAdapter sectionsPageAdapter;
-
-    private ViewPager viewPager;
 
     public int status = 1;
 
@@ -30,13 +28,13 @@ public class Home extends AppCompatActivity implements SendMessage {
 
         Log.d(TAG, "onCreate: Starting");
 
-        sectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
+        SectionsPageAdapter sectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
 
-        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        ViewPager viewPager = findViewById(R.id.viewPager);
 
         setUpViewPager(viewPager);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.TabLayout);
+        TabLayout tabLayout = findViewById(R.id.TabLayout);
 
     }
 
