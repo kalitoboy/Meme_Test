@@ -109,6 +109,7 @@ public class Overview extends Fragment implements AdapterView.OnItemSelectedList
         if (parent.getSelectedItem().equals("Neck")){
             Intent intent = new Intent(view.getContext(), Neck.class);
             startActivity(intent);
+            spinner_training.setSelection(0);
         }
 
 

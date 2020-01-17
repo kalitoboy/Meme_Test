@@ -19,6 +19,36 @@
         android:textSize="20sp" />
 
     <TextView
+        android:id="@+id/neck_step_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/neck_step_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/neck_step_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="160dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp"
+        android:textSize="20sp" />
+
+    <TextView
         android:id="@+id/timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
