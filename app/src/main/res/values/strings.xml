@@ -4,7 +4,6 @@
     <string name="health">health</string>
     <string name="settings">settings</string>
     <string name="welcome">Welcome to Meme Test</string>
-    <string name="start">Start</string>
 
     <string name="button1">button1</string>
     <string name="button2">button2</string>
@@ -21,6 +20,7 @@
     <string name="blinks">blinks</string>
     <string name="training">Training</string>
     <string name="neck">Neck</string>
+    <string name="start">Start</string>
 
     <string-array name="array_steps">
         <item>1000</item>
