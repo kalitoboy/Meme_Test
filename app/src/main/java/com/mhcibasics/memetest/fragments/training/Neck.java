@@ -17,7 +17,9 @@ public class Neck extends AppCompatActivity {
 
     Button start;
 
-    int countdown;
+    int countdown, counter = 0;
+
+    CountDownTimer countDownTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,7 @@ public class Neck extends AppCompatActivity {
 
         start = findViewById(R.id.training_start);
 
-        countdown = 30000;
+        countdown = 3000;
 
         step_1.setText("Tilt your neck up and down");
         step_1.setTextColor(Color.GRAY);
@@ -47,20 +49,20 @@ public class Neck extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (v.getId() == start.getId()) {
-                    CountDownTimer countDownTimer = new CountDownTimer(countdown, 1000) {
 
+                    start.setText("Stop");
+
+                    countDownTimer = new CountDownTimer(countdown, 1000) {
                         @Override
                         public void onTick(long millisUntilFinished) {
                             timer.setText("seconds remaining: " + millisUntilFinished / 1000);
 
-                            if (millisUntilFinished > 20000){
+                            if (millisUntilFinished > 20000) {
                                 step_1.setTextColor(Color.RED);
-                            }
-                            else if (millisUntilFinished > 10000 && millisUntilFinished <= 20000){
+                            } else if (millisUntilFinished > 10000 && millisUntilFinished <= 20000) {
                                 step_2.setTextColor(Color.RED);
                                 step_1.setTextColor(Color.GRAY);
-                            }
-                            else if (millisUntilFinished <= 10000){
+                            } else if (millisUntilFinished <= 10000) {
                                 step_3.setTextColor(Color.RED);
                                 step_2.setTextColor(Color.GRAY);
                             }
@@ -69,6 +71,7 @@ public class Neck extends AppCompatActivity {
                         @Override
                         public void onFinish() {
                             timer.setText("Done!");
+                            start.setText("Restart?");
                             step_3.setTextColor(Color.GRAY);
                         }
                     }.start();
