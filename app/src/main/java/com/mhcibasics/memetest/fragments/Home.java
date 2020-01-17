@@ -1,4 +1,4 @@
-package com.mhcibasics.memetest;
+package com.mhcibasics.memetest.fragments;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -7,10 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.google.android.material.tabs.TabLayout;
-import com.mhcibasics.memetest.fragments.Health;
-import com.mhcibasics.memetest.fragments.Overview;
-import com.mhcibasics.memetest.fragments.SendMessage;
-import com.mhcibasics.memetest.fragments.Settings;
+import com.mhcibasics.memetest.R;
+import com.mhcibasics.memetest.SectionsPageAdapter;
 
 public class Home extends AppCompatActivity implements SendMessage {
 

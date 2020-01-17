@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.mhcibasics.memetest.fragments.Home;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 

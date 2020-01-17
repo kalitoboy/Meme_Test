@@ -14,7 +14,7 @@
         <activity android:name=".fragments.healthSub.Blinks" />
         <activity android:name=".fragments.healthSub.Concentration" />
         <activity android:name=".fragments.settingsSub.Calibration" />
-        <activity android:name=".Home" />
+        <activity android:name=".fragments.Home" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
