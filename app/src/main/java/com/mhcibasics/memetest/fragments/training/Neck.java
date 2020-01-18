@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,11 +14,13 @@ import com.mhcibasics.memetest.R;
 
 public class Neck extends AppCompatActivity {
 
+    final String TAG = "Neck";
+
     TextView timer, step_1, step_2, step_3;
 
     Button start;
 
-    int countdown, counter = 0;
+    int countdown, counter;
 
     CountDownTimer countDownTimer;
 
@@ -44,13 +47,16 @@ public class Neck extends AppCompatActivity {
         step_3.setText("Hold chin leveled, push head for and backwards");
         step_3.setTextColor(Color.GRAY);
 
+        counter = 0;
+
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (v.getId() == start.getId()) {
+                if (v.getId() == start.getId() && counter == 0) {
 
                     start.setText("Stop");
+                    counter = 1;
 
                     countDownTimer = new CountDownTimer(countdown, 1000) {
                         @Override
@@ -73,8 +79,20 @@ public class Neck extends AppCompatActivity {
                             timer.setText("Done!");
                             start.setText("Restart?");
                             step_3.setTextColor(Color.GRAY);
+                            counter = 0;
                         }
                     }.start();
+                    Log.d(TAG, "Timer started");
+                }
+                else if (v.getId() == start.getId() && counter == 1){
+                    start.setText("Start");
+                    timer.setText("Interrupted!");
+                    counter = 0;
+
+                    countDownTimer.cancel();
+                    Log.d(TAG, "Timer finished");
+
+
                 }
             }
         });

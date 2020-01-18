@@ -112,8 +112,6 @@ public class Overview extends Fragment implements AdapterView.OnItemSelectedList
             startActivity(intent);
             spinner_training.setSelection(0);
         }
-
-
     }
 
     @Override
