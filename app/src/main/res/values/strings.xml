@@ -21,6 +21,7 @@
     <string name="training">Training</string>
     <string name="neck">Neck</string>
     <string name="start">Start</string>
+    <string name="who">Recommended daily steps by WHO: 8000</string>
 
     <string-array name="array_steps">
         <item>1000</item>

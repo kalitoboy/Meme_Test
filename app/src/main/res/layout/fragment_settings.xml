@@ -113,6 +113,20 @@
         android:text="@string/calibrate" />
 
     <TextView
+        android:id="@+id/WHO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="365dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:text="@string/who"
+        android:textSize="10sp"
+        />
+
+    <TextView
         android:id="@+id/text_steps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
