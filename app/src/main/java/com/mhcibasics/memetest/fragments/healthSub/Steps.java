@@ -23,8 +23,7 @@ public class Steps extends AppCompatActivity {
 
     String[] xAxis  = {"08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18"};
 
-    int[] steps_yAxis = {100,200,150,400,30,260,1230,210,306,420,888};
-
+    int[] steps_yAxis = {100, 200, 150, 400, 30, 260, 1230, 210, 306, 420, 888};
 
 
 
@@ -39,11 +38,9 @@ public class Steps extends AppCompatActivity {
 
     public void initLineChart(){
 
-        steps_lineChartView = findViewById(R.id.concentration_linechart);
+        steps_lineChartView = findViewById(R.id.steps_linechart);
 
         setBlinksData(steps_lineChartView);
-
-        initLineChart();
 
     }
 
@@ -75,11 +72,11 @@ public class Steps extends AppCompatActivity {
             yValues.add(new PointValue(i, steps_yAxis[i]));
         }
 
-        List blinks_line = new ArrayList();
-        blinks_line.add(yVal_line);
+        List steps_line = new ArrayList();
+        steps_line.add(yVal_line);
 
         LineChartData data = new LineChartData();
-        data.setLines(blinks_line);
+        data.setLines(steps_line);
 
         lineChartView.setLineChartData(data);
 

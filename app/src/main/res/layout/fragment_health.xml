@@ -26,6 +26,15 @@
         android:layout_height="200dp" />
 
     <Button
+        android:id="@+id/steps_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:text="@string/steps"/>
+
+
+    <Button
         android:id="@+id/concentration_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

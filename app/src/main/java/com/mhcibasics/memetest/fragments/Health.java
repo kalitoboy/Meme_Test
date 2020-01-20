@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import com.mhcibasics.memetest.fragments.healthSub.Blinks;
 import com.mhcibasics.memetest.fragments.healthSub.Concentration;
 import com.mhcibasics.memetest.R;
+import com.mhcibasics.memetest.fragments.healthSub.Steps;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +43,7 @@ public class Health extends Fragment {
 
     List<SliceValue> pieData;
 
-    Button concentration_button, blinks_button;
+    Button concentration_button, blinks_button, steps_button;
 
     SliceValue goal, current;
 
@@ -66,6 +67,9 @@ public class Health extends Fragment {
 
         concentration_button = view.findViewById(R.id.concentration_button);
         blinks_button = view.findViewById(R.id.blinks_button);
+        steps_button = view.findViewById(R.id.steps_button);
+
+        steps_button.setBackgroundColor(Color.WHITE);
 
         concentration_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +90,18 @@ public class Health extends Fragment {
 
                 if (v.getId() == blinks_button.getId()){
                     Intent intent = new Intent(Health.super.getContext(), Blinks.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        steps_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Clicked", Toast.LENGTH_SHORT).show();
+
+                if (v.getId() == steps_button.getId()){
+                    Intent intent = new Intent(Health.super.getContext(), Steps.class);
                     startActivity(intent);
                 }
             }
@@ -130,7 +146,7 @@ public class Health extends Fragment {
         PieChartData pieChartData = new PieChartData(pieData);
         pieChartData.setHasLabels(true);
         pieChartData.setHasCenterCircle(true);
-        pieChartData.setCenterText1("Steps").setCenterText1FontSize(20);
+        //pieChartData.setCenterText1("Steps").setCenterText1FontSize(20);
 
         pieChartView.setPieChartData(pieChartData);
     }

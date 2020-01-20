@@ -32,8 +32,7 @@ public class Concentration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_concentration);
 
-         initLineChart();
-
+        initLineChart();
 
     }
 
