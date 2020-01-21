@@ -20,7 +20,7 @@
     <lecho.lib.hellocharts.view.LineChartView
         android:id="@+id/concentration_linechart"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="150dp"
         android:layout_width="380dp"
         android:layout_height="100dp"/>
 

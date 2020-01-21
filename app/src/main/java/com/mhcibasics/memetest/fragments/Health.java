@@ -71,6 +71,18 @@ public class Health extends Fragment {
 
         steps_button.setBackgroundColor(Color.WHITE);
 
+        steps_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Clicked", Toast.LENGTH_SHORT).show();
+
+                if (v.getId() == steps_button.getId()){
+                    Intent intent = new Intent(Health.super.getContext(), Steps.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
         concentration_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,19 +106,6 @@ public class Health extends Fragment {
                 }
             }
         });
-
-        steps_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(), "Clicked", Toast.LENGTH_SHORT).show();
-
-                if (v.getId() == steps_button.getId()){
-                    Intent intent = new Intent(Health.super.getContext(), Steps.class);
-                    startActivity(intent);
-                }
-            }
-        });
-
 
 
         return view;

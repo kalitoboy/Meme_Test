@@ -29,18 +29,18 @@ public class Overview extends Fragment implements AdapterView.OnItemSelectedList
 
     private static final String TAG = "OVERVIEW";
 
-    private Button button;
+    private Button connect;
 
     private TextView text_status;
     private TextView battery_level;
 
-    int status, steps, bat_level;
+    int connected, steps, bat_level;
 
     private Spinner spinner_training;
 
 
-    public Overview(int status, int steps) {
-        this.status = status;
+    public Overview(int connected, int steps) {
+        this.connected = connected;
         this.steps = steps;
     }
 
@@ -58,7 +58,7 @@ public class Overview extends Fragment implements AdapterView.OnItemSelectedList
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_overview, container, false);
 
-        button = view.findViewById(R.id.button_connect);
+        connect = view.findViewById(R.id.button_connect);
         text_status = view.findViewById(R.id.text_connect);
         battery_level = view.findViewById(R.id.text_battery_level);
         TextView text_steps_total = view.findViewById(R.id.text_steps_total);
@@ -68,31 +68,31 @@ public class Overview extends Fragment implements AdapterView.OnItemSelectedList
 
         getActivity().registerReceiver(this.mBatInfoReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
 
-        if (status == 0) {
+        if (connected == 0) {
             text_status.setText("Connected");
-            button.setText("Disconnect");
+            connect.setText("Disconnect");
         }
-        else if (status == 1) {
+        else if (connected == 1) {
             text_status.setText("Disconnected");
-            button.setText("Connect");
+            connect.setText("Connect");
         }
 
 
-        button.setOnClickListener(new View.OnClickListener() {
+        connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (status == 0) {
-                    status++;
+                if (connected == 0) {
+                    connected++;
                     Toast.makeText(getActivity(), "Connecting", Toast.LENGTH_SHORT).show();
                     text_status.setText("Connected");
-                    button.setText("Disconnect");
+                    connect.setText("Disconnect");
                 }
-                else if (status == 1) {
-                    status--;
+                else if (connected == 1) {
+                    connected--;
                     Toast.makeText(getActivity(), "Disconnecting", Toast.LENGTH_SHORT).show();
                     text_status.setText("Disconnected");
-                    button.setText("Connect");
+                    connect.setText("Connect");
                 }
             }
         });

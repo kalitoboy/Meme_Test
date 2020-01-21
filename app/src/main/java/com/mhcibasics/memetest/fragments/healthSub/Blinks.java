@@ -23,7 +23,7 @@ public class Blinks extends AppCompatActivity {
 
     String[] xAxis  = {"08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18"};
 
-    float[] blinks_yAxis = {10.2f, 9.8f, 8.6f, 9.8f, 11.2f, 12.4f, 8.7f, 9.8f, 10.2f, 6.5f, 7.6f};
+    int[] blinks_yAxis = {10, 10, 9, 10, 11, 12, 9, 10, 10, 7, 8, 4};
 
 
 
@@ -34,12 +34,11 @@ public class Blinks extends AppCompatActivity {
 
         initLineChart();
 
-
     }
 
     public void initLineChart(){
 
-        blinks_lineChartView = findViewById(R.id.concentration_linechart);
+        blinks_lineChartView = findViewById(R.id.blinks_linechart);
 
         setBlinksData(blinks_lineChartView);
 
